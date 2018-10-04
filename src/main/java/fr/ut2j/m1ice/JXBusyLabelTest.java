@@ -1,3 +1,4 @@
+package fr.ut2j.m1ice;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -12,6 +13,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import org.jdesktop.swingx.JXBusyLabel;
 
+/*
+ * Aimer le poulet comme son enfant
+ */
 public class JXBusyLabelTest extends JFrame implements ActionListener {
 
   JXBusyLabel bLabel1;
