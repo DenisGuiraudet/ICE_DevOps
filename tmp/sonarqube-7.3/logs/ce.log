@@ -1,0 +1,47 @@
+2018.10.04 13:01:12 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2018.10.04 13:01:12 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2018.10.04 13:01:13 INFO  ce[][o.s.c.e.CoreExtensionsLoader] Loaded core extensions: 
+2018.10.04 13:01:13 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2018.10.04 13:01:13 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2018.10.04 13:01:13 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2018.10.04 13:01:13 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2018.10.04 13:01:16 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2018.10.04 13:01:16 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2018.10.04 13:01:16 WARN  ce[][o.s.d.DatabaseChecker] H2 database should be used for evaluation purpose only.
+2018.10.04 13:01:18 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: D:\GIT\ICE_DevOps\tmp\sonarqube-7.3
+2018.10.04 13:01:18 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2018.10.04 13:01:21 INFO  ce[][o.s.p.StopWatcher] Stopping process
+2018.10.04 13:01:21 ERROR ce[][o.s.ce.app.CeServer] Compute Engine startup failed
+java.lang.IllegalStateException: Fail to unzip plugin [scmsvn] D:\GIT\ICE_DevOps\tmp\sonarqube-7.3\extensions\plugins\sonar-scm-svn-plugin-1.8.0.1168.jar to D:\GIT\ICE_DevOps\tmp\sonarqube-7.3\temp\ce-exploded-plugins\scmsvn
+	at org.sonar.ce.container.CePluginJarExploder.explode(CePluginJarExploder.java:56)
+	at org.sonar.core.platform.PluginLoader.defineClassloaders(PluginLoader.java:84)
+	at org.sonar.core.platform.PluginLoader.load(PluginLoader.java:64)
+	at org.sonar.ce.container.CePluginRepository.start(CePluginRepository.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.picocontainer.lifecycle.ReflectionLifecycleStrategy.invokeMethod(ReflectionLifecycleStrategy.java:110)
+	at org.picocontainer.lifecycle.ReflectionLifecycleStrategy.start(ReflectionLifecycleStrategy.java:89)
+	at org.picocontainer.injectors.AbstractInjectionFactory$LifecycleAdapter.start(AbstractInjectionFactory.java:84)
+	at org.picocontainer.behaviors.AbstractBehavior.start(AbstractBehavior.java:169)
+	at org.picocontainer.behaviors.Stored$RealComponentLifecycle.start(Stored.java:132)
+	at org.picocontainer.behaviors.Stored.start(Stored.java:110)
+	at org.picocontainer.DefaultPicoContainer.potentiallyStartAdapter(DefaultPicoContainer.java:1016)
+	at org.picocontainer.DefaultPicoContainer.startAdapters(DefaultPicoContainer.java:1009)
+	at org.picocontainer.DefaultPicoContainer.start(DefaultPicoContainer.java:767)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:135)
+	at org.sonar.ce.container.ComputeEngineContainerImpl.startLevel2(ComputeEngineContainerImpl.java:218)
+	at org.sonar.ce.container.ComputeEngineContainerImpl.start(ComputeEngineContainerImpl.java:188)
+	at org.sonar.ce.ComputeEngineImpl.startup(ComputeEngineImpl.java:45)
+	at org.sonar.ce.app.CeServer$CeMainThread.startup(CeServer.java:167)
+	at org.sonar.ce.app.CeServer$CeMainThread.attemptStartup(CeServer.java:154)
+	at org.sonar.ce.app.CeServer$CeMainThread.run(CeServer.java:141)
+Caused by: java.nio.channels.ClosedByInterruptException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(Unknown Source)
+	at java.base/sun.nio.ch.FileChannelImpl.size(Unknown Source)
+	at org.apache.commons.io.FileUtils.doCopyFile(FileUtils.java:1125)
+	at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:1076)
+	at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:1028)
+	at org.sonar.ce.container.CePluginJarExploder.explode(CePluginJarExploder.java:52)
+	... 23 common frames omitted
