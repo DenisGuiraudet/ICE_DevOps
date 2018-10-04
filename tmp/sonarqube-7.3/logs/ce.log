@@ -45,3 +45,26 @@ Caused by: java.nio.channels.ClosedByInterruptException: null
 	at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:1028)
 	at org.sonar.ce.container.CePluginJarExploder.explode(CePluginJarExploder.java:52)
 	... 23 common frames omitted
+2018.10.04 14:27:02 INFO  ce[][o.s.p.ProcessEntryPoint] Starting ce
+2018.10.04 14:27:02 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2018.10.04 14:27:03 INFO  ce[][o.s.c.e.CoreExtensionsLoader] Loaded core extensions: 
+2018.10.04 14:27:05 INFO  ce[][o.e.p.PluginsService] no modules loaded
+2018.10.04 14:27:05 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2018.10.04 14:27:05 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2018.10.04 14:27:05 INFO  ce[][o.e.p.PluginsService] loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2018.10.04 14:27:09 INFO  ce[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [127.0.0.1:9001]
+2018.10.04 14:27:09 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2018.10.04 14:27:09 WARN  ce[][o.s.d.DatabaseChecker] H2 database should be used for evaluation purpose only.
+2018.10.04 14:27:11 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: D:\GIT\ICE_DevOps\tmp\sonarqube-7.3
+2018.10.04 14:27:11 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2018.10.04 14:27:13 WARN  ce[][o.s.c.p.ComponentKeys] Bad component key: org.sonar.java.externalreport.ExternalRulesDefinition@452e9229. Please implement toString() method on class org.sonar.java.externalreport.ExternalRulesDefinition
+2018.10.04 14:27:13 WARN  ce[][o.s.c.p.ComponentKeys] Bad component key: org.sonar.java.externalreport.ExternalRulesDefinition@33624d6a. Please implement toString() method on class org.sonar.java.externalreport.ExternalRulesDefinition
+2018.10.04 14:27:13 WARN  ce[][o.s.c.p.ComponentKeys] Bad component key: org.sonar.java.externalreport.ExternalRulesDefinition@36431bb1. Please implement toString() method on class org.sonar.java.externalreport.ExternalRulesDefinition
+2018.10.04 14:27:14 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2018.10.04 14:27:14 INFO  ce[][o.s.c.q.PurgeCeActivities] Delete the Compute Engine tasks created before 1523104034144
+2018.10.04 14:27:14 INFO  ce[][o.s.c.q.PurgeCeActivities] Delete the Scanner contexts tasks created before 1536236834154
+2018.10.04 14:27:14 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is operational
+2018.10.04 14:34:34 INFO  ce[][o.s.p.StopWatcher] Stopping process
+2018.10.04 14:34:34 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2018.10.04 14:34:34 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Waiting for workers to finish in-progress tasks
+2018.10.04 14:34:36 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped
