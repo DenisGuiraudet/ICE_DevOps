@@ -13,9 +13,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import org.jdesktop.swingx.JXBusyLabel;
 
-/*
- * Aimer le poulet comme son enfant
- */
 public class JXBusyLabelTest extends JFrame implements ActionListener {
 
   JXBusyLabel bLabel1;
